@@ -1,2 +1,3 @@
 # pd2-calismalari
-PD2 Lab Ornekleri
+
+PD2 dersinde yapmış olduğumuz lab ornekleri
