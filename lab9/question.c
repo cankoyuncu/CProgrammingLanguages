@@ -12,7 +12,7 @@ node *head, *newNode, *beforeNode, *mostSuccessful, *new;
 
 void studentListCreate(){
 	int n,k;
-	printf("How many elements will the list have?");
+	printf("How many students add your list?\n");
 	scanf("%d", &n);
 	for(k=0; k<n; k++)
 	{
@@ -45,13 +45,13 @@ void studentList()
 	p = head;
 	while(p!=NULL)
 	{
-		printf("\n ********************** \n");
-		printf("Student Number: %d\t", p->number);
-		printf("Student Name: %s\t", p->name);
-		printf("Student Midterm: %d\t", p->midterm);
-		printf("Student Final: %d\t", p->final);
+		printf("\n ******************************** \n");
+		printf("Student Number: %d\n", p->number);
+		printf("Student Name: %s\n", p->name);
+		printf("Student Midterm: %d\n", p->midterm);
+		printf("Student Final: %d\n", p->final);
 		termNote = p->midterm*0.4 + p->midterm*0.6;
-		printf("\n ********************** \n");
+		printf("\n ******************************** \n");
 		p = p->after;
 	}
 }
@@ -63,7 +63,7 @@ void studentAdd()
 	printf("Student Number:");
 	scanf("%d",&newNode->number);
 	printf("Student Name:");
-	scanf("s",&newNode->name);
+	scanf("%s",&newNode->name);
 	printf("Student Midterm:");
 	scanf("%d", &newNode->midterm);
 	printf("Student Final:");
@@ -153,7 +153,7 @@ void mostSuccessfulStudent()
 		if(calculateSuccessNote(p->midterm, p->final)>calculateSuccessNote(mostSuccessful->midterm, mostSuccessful->final))
 			mostSuccessful = p;
 	}
-	printf("Most Successfull Student:\n");
+	printf("Most Successfull Student\n");
 	printf("Number:%d - Name: %s Success Note:%.2f\n", mostSuccessful->number, mostSuccessful->name, calculateSuccessNote(mostSuccessful->midterm, mostSuccessful->final));
 }
 
@@ -187,10 +187,10 @@ void classSuccessAverage()
 int main(void)
 {
 	int select=0;
-	printf("1-Create List \n2-Add New Record \n3-Delete Record \n4-Most Success Note\n");
+	printf("1-Create List \n2-Add New Record \n3-Delete Record \n4-Most Success Note\n5-Class Success Average\n");
 	while(1)
 	{
-		printf("Select[1-5]?");
+		printf("Select[1-5]?\n");
 		scanf("%d", &select);
 		switch(select)
 		{
