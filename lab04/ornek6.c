@@ -4,5 +4,28 @@
 
 int main(){
 	
-	int 
+	int a[5];
+	int *ptr;
+	int sum=0;
+	int i;
+	
+	ptr=a;
+	
+	printf("Sayi giriniz\n");
+	for(i=0; i<5; i++){
+		scanf("%d", &*(ptr+i));
+	}
+	
+	ptr=a;
+	
+	for(i=0; i<5; i++){
+		
+		sum=sum+*(ptr+i);
+		
+	}
+	
+	printf("Toplam=%d", sum);
+	
+	getchar();
+	return 0;
 }
