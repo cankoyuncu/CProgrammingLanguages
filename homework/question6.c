@@ -1,9 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//even beginning,odd last
+
 struct node{
 	int sayi; struct node *next;
 };
+
 typedef struct node Node;
 
 void ListeYazdir(Node* head);
@@ -15,27 +18,26 @@ int main(){
 	int sayi;
 	Node *head,*tail;
 
-	head=(Node*)calloc(sizeof(Node));
-	head->next=(Node*)calloc(sizeof(Node));
+	head=(Node*)malloc(sizeof(Node));
+	head->next=(Node*)malloc(sizeof(Node));
 
-	printf("Cýkmak icin -1'e basiniz\n");
-	printf("Bir sayi giriniz:"); scanf("%d", &sayi);
+	printf("Cýkmak icin -1'e basiniz!\n");
+	printf("Bir sayi giriniz: "); scanf("%d", &sayi);
 
 	if(sayi!=-1){
-		head->sayi= sayi;
-		head->next= NULL;
-		tail= head;
+		head->sayi=sayi;
+		head->next=NULL;
+		tail=head;
 	}
 
 	while(sayi!=-1){
-		if(sayi%2==0 && sayi!=-1){
+		if(sayi%2==1 && sayi!=-1){
 			tail=SonaEkle(tail,sayi);
 		}
-		else if(sayi%2==1 && sayi!=-1){
+		else if(sayi%2==0 && sayi!=-1){
 			head=BasaEkle(head,sayi);
 		}
-
-	printf("Bir sayi giriniz: "); scanf("%d", &sayi);
+	printf("Bir sayi girniz: "); scanf("%d", &sayi);
 	}
 
 	ListeYazdir(head);
@@ -43,11 +45,10 @@ int main(){
 	return 0;
 }
 
-Node* BasaEkle(Node *head, int n){
-
+Node* BasaEkle(Node *head,int n){
 	Node *New;
-	New=(Node*)calloc(sizeof(Node));
-	New->next=(Node*)calloc(sizeof(Node));
+	New=(Node*)malloc(sizeof(Node));
+	New->next=(Node*)malloc(sizeof(Node));
 
 	New->sayi=n;
 	New->next=head;
@@ -55,10 +56,9 @@ Node* BasaEkle(Node *head, int n){
 	return New;
 }
 Node* SonaEkle(Node *tail,int n){
-
 	Node *New;
-	New=(Node*)calloc(sizeof(Node));
-	New->next=(Node*)calloc(sizeof(Node));
+	New=(Node*)malloc(sizeof(Node));
+	New->next=(Node*)malloc(sizeof(Node));
 
 	tail->next=New;
 	New->sayi=n;
