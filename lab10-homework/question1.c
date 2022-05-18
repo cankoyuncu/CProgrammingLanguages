@@ -18,8 +18,9 @@ int main(){
 	head=(Node*)calloc(sizeof(Node));
 	head->next=(Node*)calloc(sizeof(Node));
 
-	printf("Cıkmak icin -1'e basiniz\n");
-	printf("Bir sayi giriniz:"); scanf("%d", &sayi);
+	printf("Cikmak icin -1'e basiniz\n");
+	printf("Bir sayi giriniz:");
+	scanf("%d", &sayi);
 
 	if(sayi!=-1){
 		head->sayi= sayi;

@@ -1,8 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//even beginning,odd last
-
 struct node{
 	int sayi; struct node *next;
 };
@@ -10,9 +8,9 @@ struct node{
 typedef struct node Node;
 
 void ListeYazdir(Node* head);
+
 Node* BasaEkle(Node* head, int sayi);
 Node* SonaEkle(Node* tail, int sayi);
-
 
 int main(){
 	int sayi;
@@ -21,8 +19,9 @@ int main(){
 	head=(Node*)malloc(sizeof(Node));
 	head->next=(Node*)malloc(sizeof(Node));
 
-	printf("Cýkmak icin -1'e basiniz!\n");
-	printf("Bir sayi giriniz: "); scanf("%d", &sayi);
+	printf("Cikmak icin -1'e basiniz!\n");
+	printf("Bir sayi giriniz: ");
+	scanf("%d", &sayi);
 
 	if(sayi!=-1){
 		head->sayi=sayi;
@@ -37,6 +36,7 @@ int main(){
 		else if(sayi%2==0 && sayi!=-1){
 			head=BasaEkle(head,sayi);
 		}
+		
 	printf("Bir sayi girniz: "); scanf("%d", &sayi);
 	}
 
@@ -49,12 +49,12 @@ Node* BasaEkle(Node *head,int n){
 	Node *New;
 	New=(Node*)malloc(sizeof(Node));
 	New->next=(Node*)malloc(sizeof(Node));
-
 	New->sayi=n;
 	New->next=head;
 
 	return New;
 }
+
 Node* SonaEkle(Node *tail,int n){
 	Node *New;
 	New=(Node*)malloc(sizeof(Node));

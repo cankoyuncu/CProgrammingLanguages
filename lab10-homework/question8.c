@@ -4,17 +4,17 @@
 struct node{
     int sayi; struct node* next;
 };
+
 typedef struct node Node;
 
 Node* ListeOlustur();
 void ListeYazdir(Node* head);
 Node* ListeDuzenle(Node *head);
 
-
 int main(){
+	
 	int sayi;
 	Node *head;
-
 	head= ListeOlustur();
 	ListeYazdir(head);
 	printf("\n");
@@ -46,7 +46,6 @@ Node* ListeOlustur(){
 	return head;
 }
 
-
 Node* ListeDuzenle(Node *head){
 	Node *p,*q;
 	p=head;
@@ -72,7 +71,6 @@ Node* ListeDuzenle(Node *head){
 
 	return p;
 }
-
 
 void ListeYazdir(Node* head){
 	Node *p;

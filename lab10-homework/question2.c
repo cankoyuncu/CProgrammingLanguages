@@ -4,16 +4,16 @@
 struct node{
 	int sayi; struct node *next;
 };
+
 typedef struct node Node;
 
 Node* ListeDuzenle(Node* head);
 Node* ListeOlustur();
-void ListeYazdir(Node* head);
 
+void ListeYazdir(Node* head);
 
 int main(){
 	Node *head;
-
 	head= ListeOlustur();
 	ListeYazdir(head);
 	printf("\n");
@@ -30,15 +30,19 @@ Node* ListeOlustur(){
 	printf("Listedeki sayi adetini giriniz: \n"); scanf("%d",&n);
 
 	for(i=0;i<n;i++){
+		
 		if(i==0){
 			head=(Node*)malloc(sizeof(Node));
 			p=head;
 		}
+		
 		else{
 			p->next=(Node*)malloc(sizeof(Node));
 			p=p->next;
 		}
-		printf("Bir sayi giriniz: "); scanf("%d", &p->sayi);
+		
+		printf("Bir sayi giriniz: "); 
+		scanf("%d", &p->sayi);
 	}
 	p->next=NULL;
 
@@ -60,7 +64,6 @@ Node* ListeDuzenle(Node* head){
 			q->next=NULL;
 			p->next=head;
 			break;
-
 		}
 		q=p;
 		p=p->next;
