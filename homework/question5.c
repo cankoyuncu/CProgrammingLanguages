@@ -11,11 +11,9 @@ Node* ListeDuzenle(Node* head);
 Node* ListeOlustur();
 void ListeYazdir(Node* head);
 
-
 int main(){
 
     Node *head;
-
     head=ListeOlustur();
     ListeYazdir(head);
     printf("\n");

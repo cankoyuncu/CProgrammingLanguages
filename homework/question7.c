@@ -11,7 +11,6 @@ Node* ListeOlustur();
 Node* DugumSil(Node*, int);
 void ListeYazdir(Node* head);
 
-
 int main(){
 	Node *head;
 	int yas;

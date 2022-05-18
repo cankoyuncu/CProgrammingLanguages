@@ -13,10 +13,8 @@ Node* ListeOlustur();
 Node* OrtadakiSil(Node* head);
 void ListeYazdir(Node* head);
 
-
 int main(){
 	Node* head;
-
 	head=ListeOlustur();
 	ListeYazdir(head);
 	printf("\n");
