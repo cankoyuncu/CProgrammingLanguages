@@ -12,7 +12,6 @@ void main()
         zar = rand() % 6 + 1;
         sum += zar;
     }
-    
     switch (sum){
     case 7:
     case 11:
