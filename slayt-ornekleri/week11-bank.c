@@ -142,7 +142,7 @@ void listele(FILE *fPtr)
 {
 	struct musteri hesapBilgi = {0,"","",0.0};
 
-	printf("%-10s%-16s%-11s%10s\n","HesapNo","Soyad","›sim","Bakiye");
+	printf("%-10s%-16s%-11s%10s\n","HesapNo","Soyad","√ùsim","Bakiye");
 	while(!feof(fPtr))
 	{
 		fread(&hesapBilgi,sizeof(struct musteri),1,fPtr);
