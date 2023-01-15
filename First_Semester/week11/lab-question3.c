@@ -19,6 +19,7 @@ int main(){
     for(i = 0; i < table; i++){
         printf("table[%d] = %.2lf\n", i, table[i]);
     }
+    
     avgKilo = table[i][0] / i;
     avgBoy = table[i][1] / i;
 
