@@ -1,3 +1,3 @@
-# Programlama Dilleri-2 Lab Ornekleri
+# ProgrammingLanguages2 
 
-Programlama Dilleri-2 dersinde yapmis oldugumuz lab ornekleri
+Programming Languages 2 Examples
